@@ -1,0 +1,284 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-item {
+  margin-bottom: 15px;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.stats-table th, .stats-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.stats-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.channel-selector {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.channel-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.channel-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.channel-checkbox input {
+  margin-right: 5px;
+}
+
+.channel-toggle-btn {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.channel-toggle-btn:hover {
+  background-color: #e8e8e8;
+}
+
+.view-mode-selector {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-mode-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.view-mode-buttons button {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.view-mode-buttons button:hover {
+  background-color: #e8e8e8;
+}
+
+.view-mode-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.visualization-container {
+  height: 400px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.analysis-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-uploader .upload-instructions {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.error-message {
+  color: #d9534f;
+  margin: 10px 0;
+}
+
+/* 新增的 Tab 樣式 */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button:hover {
+  background-color: #e9e9e9;
+}
+
+.tab-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* 實時分析相關樣式 */
+.realtime-analyzer {
+  width: 100%;
+}
+
+.control-panel {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.control-panel h3 {
+  margin-top: 0;
+}
+
+.stats-container {
+  margin: 20px 0;
+}
+
+/* 異常通知相關樣式 */
+.anomaly-alerts-container {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.alerts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.alerts-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.anomaly-alerts {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px 15px;
+  background-color: #fff;
+}
+
+.no-alerts {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.alert-item {
+  animation: alertFadeIn 0.3s ease-in-out;
+}
+
+.alert-item.critical {
+  border-left: 4px solid #dc3545;
+}
+
+.alert-item.warning {
+  border-left: 4px solid #ffc107;
+}
+
+.anomaly-thresholds {
+  background-color: #f9f9f9;
+}
+
+.anomaly-thresholds h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+@keyframes alertFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 8通道相關樣式 */
+.channel-selector.card {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+
+.channel-checkbox span {
+  font-weight: bold;
+}
+
+/* 響應式樣式 */
+@media (max-width: 768px) {
+  .tab-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .visualization-container {
+    height: 300px;
+  }
+  
+  .channel-checkboxes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .channel-checkbox {
+    margin-bottom: 5px;
+  }
+} 
